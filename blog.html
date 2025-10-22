@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Blogging Platform</title>
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+  <header>
+    <h1>My Blogging Platform</h1>
+  </header>
+
+  <main class="container">
+    <section class="panel" id="editor">
+      <h2>New / Edit Post</h2>
+      <input id="title" placeholder="Post title" />
+      <textarea id="content" rows="8" placeholder="Write your post..."></textarea>
+
+      <!-- Centered publish checkbox -->
+      <div class="center-row">
+        <label class="publish-label">
+          <input type="checkbox" id="published" />
+          <span class="custom-checkbox"></span>
+          Publish now
+        </label>
+      </div>
+
+      <!-- Centered buttons -->
+      <div class="center-row">
+        <button id="saveBtn">Save</button>
+        <button id="clearBtn" class="muted">Clear</button>
+      </div>
+    </section>
+
+    <section class="panel" id="browse">
+      <div class="row">
+        <input id="search" placeholder="Search posts..." />
+        <small id="count"></small>
+      </div>
+      <div id="posts" class="posts-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
